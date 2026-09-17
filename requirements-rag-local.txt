@@ -1,0 +1,7 @@
+# Optional local CPU retrieval runtime; never a corpus build dependency.
+faiss-cpu==1.12.0
+numpy==2.0.2
+torch==2.8.0
+sentence-transformers==5.1.0
+transformers==4.55.4
+rank-bm25==0.2.2

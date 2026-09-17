@@ -1,0 +1,7 @@
+{
+  "commercial": false,
+  "defaultEnabled": false,
+  "intendedUse": "assessment-calibration",
+  "policyVersion": "c1-rag-target-policy-v1",
+  "targetEnvironment": "local-desktop-public-safe"
+}

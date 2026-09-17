@@ -1,0 +1,546 @@
+/* Polished desktop theme: crisp contrast, calm surfaces, report-first reading. */
+
+* {
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    color: #17181c;
+}
+
+QMainWindow, QWidget#root {
+    background: #f3f5f7;
+}
+
+/* Top bar */
+QWidget#topbar {
+    background: #fbfcfd;
+    border-bottom: 1px solid #dfe5ea;
+}
+QLabel#appTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111318;
+}
+QLabel#appSubtitle {
+    font-size: 11px;
+    color: #667085;
+}
+
+/* Panes */
+QFrame#pane {
+    background: #ffffff;
+    border: 1px solid #dfe5ea;
+    border-radius: 12px;
+}
+QLabel.eyebrow {
+    font-size: 10px;
+    color: #7a8796;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+QLabel.paneTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #17181c;
+}
+
+/* Editors */
+QTextEdit, QPlainTextEdit {
+    background: #fcfdfd;
+    border: 1px solid #d8e0e7;
+    border-radius: 10px;
+    padding: 12px 13px;
+    font-size: 13px;
+    color: #18202b;
+    selection-background-color: #b8dbc6;
+    selection-color: #101418;
+}
+QTextEdit#candidateEssay {
+    color: #101828;
+    font-size: 14px;
+    line-height: 150%;
+}
+QTextEdit:focus, QPlainTextEdit:focus {
+    background: #ffffff;
+    border: 1px solid #21735a;
+}
+
+/* Splitter */
+QSplitter::handle {
+    background: transparent;
+}
+QSplitter::handle:horizontal {
+    width: 12px;
+}
+QSplitter::handle:hover {
+    background: #dbe7e1;
+    border-radius: 4px;
+}
+
+/* Buttons */
+QPushButton {
+    background: #ffffff;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2b3440;
+}
+QPushButton:hover {
+    background: #f6faf8;
+    border-color: #21735a;
+    color: #175c49;
+}
+QPushButton:pressed {
+    background: #e9f3ee;
+}
+QPushButton:disabled {
+    color: #a5afba;
+    border-color: #e3e8ee;
+    background: #f7f9fb;
+}
+QPushButton#primary {
+    background: #14171f;
+    border: 1px solid #14171f;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+QPushButton#primary:hover {
+    background: #21735a;
+    border-color: #21735a;
+}
+QPushButton#primary:disabled {
+    background: #b9c2cc;
+    border-color: #b9c2cc;
+    color: #f3f5f7;
+}
+QPushButton.clearButton {
+    background: #f7f9fb;
+    border-color: #e1e7ee;
+    color: #657283;
+    padding: 6px 10px;
+    font-size: 11px;
+}
+QPushButton.clearButton:hover {
+    background: #fff6f3;
+    border-color: #d77d62;
+    color: #a5402c;
+}
+
+/* Task segmented control */
+QPushButton.segment {
+    border-radius: 0px;
+    padding: 6px 15px;
+    background: #eef2f6;
+    border: 1px solid #d8e0e7;
+    color: #596575;
+}
+QPushButton.segment:hover {
+    background: #f7fafc;
+}
+QPushButton.segment:checked {
+    background: #14171f;
+    border-color: #14171f;
+    color: #ffffff;
+    font-weight: 700;
+}
+QPushButton.targetSegment {
+    background: #f7f9fb;
+    border: 1px solid #d8e0e7;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #596575;
+}
+QPushButton.targetSegment:hover {
+    background: #eef6f2;
+    border-color: #8fc6ad;
+    color: #175c49;
+}
+QPushButton.targetSegment:checked {
+    background: #21735a;
+    border-color: #21735a;
+    color: #ffffff;
+}
+QPushButton.targetSegment:disabled {
+    background: #f7f9fb;
+    border-color: #e3e8ee;
+    color: #a5afba;
+}
+
+/* Inputs */
+QComboBox, QLineEdit {
+    background: #ffffff;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 12px;
+    color: #18202b;
+}
+QComboBox:focus, QLineEdit:focus {
+    border-color: #21735a;
+}
+QComboBox::drop-down { border: none; width: 22px; }
+
+/* Small labels */
+QLabel#wordCount {
+    background: #eef6f2;
+    border: 1px solid #d6e8df;
+    border-radius: 999px;
+    padding: 4px 9px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #21735a;
+}
+QLabel#corpusStatus {
+    font-size: 11px;
+    color: #667085;
+}
+QLabel.fieldLabel {
+    font-size: 11px;
+    font-weight: 700;
+    color: #667085;
+}
+QLabel#errorText {
+    font-size: 12px;
+    color: #b2402d;
+}
+QLabel#imagePreview {
+    background: #f8fafc;
+    border: 1px dashed #c7d2de;
+    border-radius: 10px;
+    color: #7a8796;
+    padding: 8px;
+}
+
+/* Score cards */
+QFrame.scoreCard {
+    background: #fffefb;
+    border: 1px solid #c9ced4;
+    border-radius: 0;
+}
+QFrame.scoreCard:hover { border-color: #7d8791; }
+QFrame#overallCard {
+    background: #191970;
+    border: 1px solid #191970;
+    border-radius: 0;
+}
+QLabel.scoreLabel {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10px;
+    color: #19395c;
+    font-weight: 700;
+}
+QLabel.scoreValue {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 23px;
+    font-weight: 700;
+    color: #1d232b;
+}
+QLabel#overallLabel { font-size: 10px; color: #eeeeff; font-weight: 700; }
+QLabel#overallValue { font-size: 28px; font-weight: 800; color: #ffffff; }
+
+/* Feedback scroll and report layout */
+QScrollArea { border: none; background: transparent; }
+QScrollArea > QWidget > QWidget { background: transparent; }
+
+QFrame.reportSection,
+QFrame.feedbackBlock,
+QFrame.sentenceCompare,
+QFrame.vocabularyCard,
+QFrame.vocabularyTable,
+QFrame.editorialBlock,
+QFrame.criterionCard,
+QFrame.memoryCard,
+QFrame.decisionCard,
+QLabel.reportSectionTitle,
+QLabel.reportSectionSubtitle,
+QLabel.reportBody,
+QLabel.miniFeedback,
+QLabel.paragraphTitle {
+    font-family: SimSun, "宋体", "Songti SC", serif;
+}
+QFrame.reportSection {
+    background: #fffefb;
+    border: none;
+    border-top: 2px solid #19395c;
+    border-radius: 0;
+}
+QFrame#scoreDiagnosisSection {
+    background: #fffefb;
+    border-top: 3px solid #19395c;
+}
+QFrame#paragraphFeedbackSection {
+    background: #fffefb;
+    border-top: 3px solid #1d232b;
+}
+QFrame#languageUpgradeSection {
+    background: #fffefb;
+    border-top: 3px solid #19395c;
+}
+QFrame#finalVersionSection {
+    background: #c6c6db;
+    border: 2px solid #191970;
+    border-radius: 0;
+}
+QFrame#finalReviewSection {
+    background: #fffefb;
+    border-top: 3px solid #1d232b;
+}
+QLabel.reportSectionTitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1d232b;
+}
+QFrame#scoreDiagnosisSection QLabel.reportSectionTitle,
+QFrame#languageUpgradeSection QLabel.reportSectionTitle {
+    color: #19395c;
+}
+QFrame#finalVersionSection QLabel.reportSectionTitle {
+    color: #191970;
+    font-size: 19px;
+}
+QLabel.reportSectionSubtitle {
+    font-size: 11px;
+    color: #68727c;
+}
+QLabel.reportBody {
+    font-size: 12.5px;
+    color: #1d232b;
+}
+QLabel.englishBody {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13px;
+    color: #1d232b;
+}
+QLabel.candidateParagraph {
+    background: #fffefb;
+    border: none;
+    border-bottom: 1px solid #c9ced4;
+    border-radius: 0;
+    padding: 8px 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13px;
+    color: #1d232b;
+}
+QLabel.rewriteBody {
+    background: #d8d8e7;
+    border: none;
+    border-left: 4px solid #191970;
+    border-radius: 0;
+    padding: 16px 18px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    color: #111126;
+}
+QFrame.feedbackBlock {
+    background: #fffefb;
+    border: none;
+    border-top: 2px solid #1d232b;
+    border-radius: 0;
+}
+QFrame.feedbackBlock:hover { border-color: #19395c; }
+QFrame.sentenceCompare {
+    background: #fffefb;
+    border: none;
+    border-top: 2px solid #19395c;
+    border-radius: 0;
+}
+QFrame.criterionCard {
+    background: #fffefb;
+    border: none;
+    border-bottom: 1px solid #c9ced4;
+    border-radius: 0;
+}
+QFrame.memoryCard {
+    background: #fffefb;
+    border: none;
+    border-bottom: 1px solid #c9ced4;
+    border-radius: 0;
+}
+QFrame.decisionCard {
+    background: #fffefb;
+    border: none;
+    border-bottom: 1px solid #c9ced4;
+    border-radius: 0;
+}
+QFrame.editorialBlock {
+    background: #faf9f6;
+    border: none;
+    border-top: 1px solid #7d8791;
+    border-bottom: 1px solid #7d8791;
+    border-radius: 0;
+}
+QLabel.editorialLabel {
+    color: #68727c;
+    font-size: 10px;
+    font-weight: 700;
+}
+QLabel.editorialSubheading {
+    color: #19395c;
+    border-top: 3px solid #19395c;
+    padding: 9px 0 5px 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+QLabel.decisionHeading {
+    padding: 6px 9px;
+    border-radius: 0;
+    font-size: 11px;
+    font-weight: 800;
+}
+QLabel.keep {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #19395c;
+    color: #19395c;
+}
+QLabel.simplify {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #8a651d;
+    color: #8a651d;
+}
+QLabel.remove {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #8a3b35;
+    color: #8a3b35;
+}
+QLabel.paragraphTitle {
+    font-size: 12px;
+    font-weight: 800;
+    color: #19395c;
+}
+QLabel.criterionTitle,
+QLabel.subsectionTitle {
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #19395c;
+}
+QLabel.miniFeedback {
+    font-size: 11.5px;
+    color: #1d232b;
+}
+QLabel.compareOriginal {
+    background: #fffefb;
+    border: 1px solid #c9ced4;
+    border-radius: 0;
+    padding: 10px 11px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11.5px;
+    color: #1d232b;
+}
+QLabel.compareImproved {
+    background: #eaf0f6;
+    border: 1px solid #c9ced4;
+    border-radius: 0;
+    padding: 10px 11px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11.5px;
+    color: #19395c;
+}
+QFrame.feedbackSummary,
+QFrame.sentencePair {
+    background: transparent;
+    border: none;
+}
+QLabel.strengthBox,
+QLabel.issueBox {
+    border: 1px solid #c9ced4;
+    border-radius: 0;
+    padding: 10px 11px;
+    font-family: SimSun, "宋体", "Songti SC", serif;
+    font-size: 11.5px;
+}
+QLabel.strengthBox {
+    background: #fffefb;
+    color: #1d232b;
+}
+QLabel.issueBox {
+    background: #f8ece9;
+    color: #9b1c1c;
+}
+QLabel.suggestionBox {
+    background: #fbf4dc;
+    border: 1px solid #c9ced4;
+    border-radius: 0;
+    padding: 10px 11px;
+    font-family: SimSun, "宋体", "Songti SC", serif;
+    font-size: 11.5px;
+    color: #8a651d;
+}
+QLabel.reportTag {
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-family: SimSun, "宋体", "Songti SC", serif;
+    font-size: 10px;
+    font-weight: 800;
+}
+QLabel.tagBlue {
+    background: #eaf2ff;
+    border: 1px solid #8cb4e8;
+    color: #174ea6;
+}
+QLabel.tagYellow {
+    background: #fff4c2;
+    border: 1px solid #e0a800;
+    color: #7a5600;
+}
+QLabel.tagRed {
+    background: #ffecec;
+    border: 1px solid #d93025;
+    color: #9b1c1c;
+}
+QLabel.warnBox {
+    background: #fbf4dc;
+    border: 1px solid #d7c6a5;
+    border-radius: 0;
+    padding: 9px 11px;
+    color: #8a651d;
+    font-size: 12px;
+}
+QFrame.vocabularyTable {
+    background: #fffefb;
+    border: 1px solid #c9ced4;
+    border-radius: 0;
+}
+QLabel.vocabularyHead {
+    background: #19395c;
+    color: #ffffff;
+    border-right: 1px solid #61758b;
+    padding: 9px 8px;
+    font-family: SimSun, "宋体", "Songti SC", serif;
+    font-size: 10px;
+    font-weight: 700;
+}
+QLabel.vocabularyCell {
+    background: #fffefb;
+    color: #1d232b;
+    border-right: 1px solid #c9ced4;
+    border-bottom: 1px solid #c9ced4;
+    padding: 9px 8px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10.5px;
+}
+QLabel.recommendationCell {
+    color: #19395c;
+    font-weight: 700;
+}
+QFrame#emptyState {
+    background: #fbfcfd;
+    border: 1px dashed #cfd8e3;
+    border-radius: 12px;
+}
+QLabel#emptyTitle { font-size: 14px; font-weight: 800; color: #445161; }
+QLabel#emptyHint { font-size: 11px; color: #7a8796; }
+
+QScrollBar:vertical {
+    background: transparent; width: 10px; margin: 2px;
+}
+QScrollBar::handle:vertical {
+    background: #cfd8e3; border-radius: 5px; min-height: 34px;
+}
+QScrollBar::handle:vertical:hover { background: #aebaca; }
+QScrollBar::add-line, QScrollBar::sub-line { height: 0; }

@@ -1,0 +1,50 @@
+{
+  "rubric_id": "ielts_academic_writing_task1",
+  "version": "1.0.0",
+  "schema_version": "1.0.0",
+  "task_type": "task1",
+  "module": "academic",
+  "runtime_content_sha256": "8ff84b27fa0c1604255da5a513bddeef39f5e8f6903736b4dc78482fab899313",
+  "runtime_review_gate": "TASK1_RUBRIC_V1_READY",
+  "hash_disposition": {
+    "algorithm": "SHA-256",
+    "encoding": "UTF-8",
+    "canonical_json": "ensure_ascii=false; sort_keys=true; separators=(',', ':')",
+    "semantic_envelope": [
+      "manifest",
+      "authority_sources",
+      "criteria"
+    ],
+    "contract_version": "P1_01_RUNTIME_SEMANTIC_V1",
+    "provenance_and_paths_excluded": true
+  },
+  "commercial_distribution_status": "NOT_ASSESSED",
+  "public_repo_status": "DO_NOT_PUBLISH_DESCRIPTOR_TEXT_WITHOUT_RIGHTS_REVIEW",
+  "asset_file_sha256": {
+    "task1/current.json": "25c13f1cab1112964596dfcc10dd2342a5d4bdcacb126214416e727766acca7a",
+    "task1/v1.0.0/manifest.json": "77c167a97dda6ef54cf247d0f9ff6ed553549e5b131e763161afa96bec5cde63",
+    "task1/v1.0.0/TA.json": "9a02ea28baa9e25ae6b733d5213c3cc4a37c52cc11c2755a4e07823e4a293f0b",
+    "task1/v1.0.0/CC.json": "fa16b6f8cbd942ab54f3a89d8423ca8c3afa83e2bf72b2974f5d36f3c07cb078",
+    "task1/v1.0.0/LR.json": "ab4d044de2155f719c740be7c9e076b09bde8cb700eb92b0a5023b0becb5f6e7",
+    "task1/v1.0.0/GRA.json": "ca8affdeacf636935c0eff0d72f3b3aeee66f512bcbb9b02983bd25003e26288",
+    "schema/task1-current-v1.schema.json": "eea59ee9389e7971537ecc883dff032ce631b14642d5122028263126fe910b1b",
+    "schema/task1-manifest-v1.schema.json": "a352a8689bb498c3ad84ddc79dfdd093d44fd78a02eb5402a5ddb00a19a11916",
+    "schema/task1-criterion-v1.schema.json": "9299c1aa39900cbf807e95b7c0b059a018b5e8c48e5d83315cdcafb32d65391d"
+  },
+  "approved_provenance": [
+    {
+      "source_id": "IELTS_WBD_2023_TASK1",
+      "publisher": "IELTS",
+      "classification": "OFFICIAL_RUBRIC_SOURCE",
+      "usage_classification": "PRIVATE_SOURCE_REFERENCE_AND_STRUCTURED_INTERNAL_RUBRIC",
+      "source_pdf_sha256": "e3c88943ef92d98988ce4db454fd7fa8d8435f0b25e9ec667e3720a5c1168d1b"
+    },
+    {
+      "source_id": "IELTS_WKAC_TASK1",
+      "publisher": "IELTS",
+      "classification": "OFFICIAL_RUBRIC_SOURCE",
+      "usage_classification": "PRIVATE_SOURCE_REFERENCE_AND_STRUCTURED_INTERNAL_RUBRIC",
+      "source_pdf_sha256": "5e46074fab056620861710ba77fe6e8d183a9403a70b5228e00b96ef7e94422e"
+    }
+  ]
+}

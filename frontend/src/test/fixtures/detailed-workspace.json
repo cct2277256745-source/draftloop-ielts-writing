@@ -1,0 +1,516 @@
+{
+  "version": "draftloop-browser-workspace-v1",
+  "submissionId": "submission_cae5455a260e13f7162c64e78d6aa871",
+  "rag": {
+    "status": "DISABLED",
+    "mode": null,
+    "packageIdentity": null,
+    "scoreAuthority": false,
+    "reason": "PACKAGE_NOT_CONFIGURED",
+    "evidenceState": "NOT_REACHED"
+  },
+  "semanticResult": {
+    "version": "c4-semantic-result-v1",
+    "submissionId": "submission_cae5455a260e13f7162c64e78d6aa871",
+    "state": "COMPLETE",
+    "submissionVersion": 3,
+    "acceptedResultSha256": "f147125365e1ff3890eca492b25503a36669c94ee513d05ada375abbb1b1fd22",
+    "failureCode": null,
+    "semanticResultSha256": "bd5f11bf323b623974d771918f52516b1983a1a23ad583000a10fd6fbc628075"
+  },
+  "presentation": {
+    "state": "NORMAL",
+    "sourceSemanticSha256": "bd5f11bf323b623974d771918f52516b1983a1a23ad583000a10fd6fbc628075",
+    "sourceReportSha256": "85e80334907f78466c5ccbf3a2f2d8e10e0f0e1b32bcae9c01e7a186b7f5d3a7",
+    "failureCode": null,
+    "report": {
+      "overallBand": 6.0,
+      "criteria": {
+        "CC": 6.0,
+        "GRA": 6.0,
+        "LR": 6.0,
+        "TR": 6.0
+      },
+      "likelyRange": [
+        6.0,
+        6.0
+      ],
+      "confidence": "HIGH",
+      "lockedScoreSha256": "531c0531a7414c08ee18f0b25cf13dcb6d1b035519516906e50c30d490eccca1",
+      "disclaimer": "这是内部预估分数学习报告，不是 IELTS 官方成绩或考官决定。",
+      "sections": [
+        {
+          "key": "bottlenecks",
+          "label": "主要瓶颈",
+          "records": [
+            {
+              "id": "3beed287ef9cc27ff6c2745fd28e72219a58f918106964c3541d3bfe05d12d8f",
+              "criterion": "TR",
+              "text": "展开已有证据支持的主要观点。",
+              "textEn": "Develop the supported main claim.",
+              "authority": "CURRENT_STUDENT_EVIDENCE",
+              "evidence": [
+                {
+                  "start": 0,
+                  "end": 58,
+                  "scope": "EXACT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "keep",
+          "label": "保留项",
+          "records": [
+            {
+              "id": "d9e341b5d4a83ae260d4bd611e74c42dcffdbd05e110b751543129f19dafd28a",
+              "criterion": "TR",
+              "text": "保留已有证据支持的限定表达。",
+              "textEn": "Keep the supported qualifying language.",
+              "authority": "CURRENT_STUDENT_EVIDENCE",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "key": "mind_map",
+          "label": "文章思维导图",
+          "records": [
+            {
+              "id": "d1d87eb81d1bb0e64f0508dd7ba0d160fd5c09a4890916583a179dd44140baac",
+              "criterion": "TR",
+              "text": "把主要观点与一个结果建立联系。",
+              "textEn": "Connect the main claim to one consequence.",
+              "authority": "CURRENT_STUDENT_EVIDENCE",
+              "evidence": [
+                {
+                  "start": 0,
+                  "end": 58,
+                  "scope": "EXACT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "paragraphs",
+          "label": "段落诊断",
+          "records": [
+            {
+              "id": "542b940174cf4b5c036ad4d0b008d7bef6c0e504d8d2a930307c7ebc8bc9ba54",
+              "criterion": "TR",
+              "text": "该段需要更清晰的证据链。",
+              "textEn": "The paragraph needs a clearer evidence chain.",
+              "authority": "CURRENT_STUDENT_EVIDENCE",
+              "evidence": [
+                {
+                  "start": 0,
+                  "end": 58,
+                  "scope": "EXACT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "corrections",
+          "label": "纠正项",
+          "records": [
+            {
+              "id": "9b0ee4bce054a013232c416eac233dec02e49f574b11e3ccf1decefa7e3257c6",
+              "criterion": "TR",
+              "text": "在不改变立场的前提下澄清关系。",
+              "textEn": "Clarify the relationship without changing the position.",
+              "authority": "CURRENT_STUDENT_EVIDENCE",
+              "evidence": [
+                {
+                  "start": 0,
+                  "end": 58,
+                  "scope": "EXACT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "minimal_paragraph",
+          "label": "最小改进段落",
+          "records": [
+            {
+              "id": "f2abe26a14b7756236006b71d188becb97071d731601aa77121c3bd5cdbc5ceb",
+              "criterion": "TR",
+              "text": "只补充一个有证据支持的连接，其余措辞保持不变。",
+              "textEn": "Add one supported link and preserve the remaining wording.",
+              "authority": "CURRENT_STUDENT_EVIDENCE",
+              "evidence": [
+                {
+                  "start": 0,
+                  "end": 58,
+                  "scope": "EXACT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "next_actions",
+          "label": "下一步行动",
+          "records": [
+            {
+              "id": "9911aa80ca3a7d06dc517877eee3851d63dfe5701bcde8770aa8243d0fa06c35",
+              "criterion": "TR",
+              "text": "先修订此问题，再增加新语言。",
+              "textEn": "Revise this issue before adding new language.",
+              "authority": "CURRENT_STUDENT_EVIDENCE",
+              "evidence": [
+                {
+                  "start": 0,
+                  "end": 58,
+                  "scope": "EXACT"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rag": {
+        "status": "DISABLED",
+        "mode": null,
+        "packageIdentity": null,
+        "scoreAuthority": false,
+        "reason": "PACKAGE_NOT_CONFIGURED",
+        "evidenceState": "RAG_DISABLED"
+      },
+      "detailedReport": {
+        "contentSha256": "02529524e7aea0f849aecdd569088aed17bb416b4e9b614b7297fcda1ffdeb01",
+        "criterionAnalyses": [
+          {
+            "analysis": "文章始终围绕公共交通与道路投资展开，立场明确。",
+            "criterion": "TR",
+            "limitations": [
+              "主体段需要解释资源集中如何减少车流。"
+            ],
+            "strengths": [
+              "保留了农村道路这一合理例外。"
+            ]
+          },
+          {
+            "analysis": "五段各有明确职责，读者能够跟随论证顺序。",
+            "criterion": "CC",
+            "limitations": [
+              "部分句子之间仍缺少因果连接。"
+            ],
+            "strengths": [
+              "教育机会段的例子与中心论点相连。"
+            ]
+          },
+          {
+            "analysis": "主题词能够传达主要意思，但少量搭配不自然。",
+            "criterion": "LR",
+            "limitations": [
+              "independency 和 very serious thing 限制表达精确度。"
+            ],
+            "strengths": [
+              "road maintenance、residential areas 等表达贴合主题。"
+            ]
+          },
+          {
+            "analysis": "能够使用条件句和从句，并保留清晰的句子边界。",
+            "criterion": "GRA",
+            "limitations": [
+              "much people 的数量词与名词不匹配。"
+            ],
+            "strengths": [
+              "结论中的并列结构清楚。"
+            ]
+          }
+        ],
+        "encouragement": "你已经形成了明确立场，并用学生通勤的场景解释了教育机会。保留这条具体的论证链，下一步把其他主体段也写得同样清楚。",
+        "essayVersionId": "essay:d284719edda7e71f2642ef168c48e8622763f561ca7c41d6cda061b3d33891d9",
+        "lockedScoreSha256": "531c0531a7414c08ee18f0b25cf13dcb6d1b035519516906e50c30d490eccca1",
+        "mindMap": {
+          "branches": [
+            {
+              "gap": "",
+              "paragraphIndex": 1,
+              "point": "优先发展公交，同时保留必要道路维护。",
+              "role": "引言与立场",
+              "support": []
+            },
+            {
+              "gap": "需要补足具体因果链。",
+              "paragraphIndex": 2,
+              "point": "公交集中运送乘客，减少私家车使用。",
+              "role": "交通效率",
+              "support": []
+            },
+            {
+              "gap": "",
+              "paragraphIndex": 3,
+              "point": "连接住宅、学校和工作场所，让更多人获得机会。",
+              "role": "机会与公平",
+              "support": []
+            },
+            {
+              "gap": "",
+              "paragraphIndex": 4,
+              "point": "人口分散的地区仍需要道路。",
+              "role": "让步与边界",
+              "support": []
+            },
+            {
+              "gap": "",
+              "paragraphIndex": 5,
+              "point": "明确投入优先级，兼顾基础维护。",
+              "role": "总结立场",
+              "support": []
+            }
+          ],
+          "thesis": "优先投资公共交通，同时保障必要道路维护。"
+        },
+        "nextActions": [
+          {
+            "minutes": 12,
+            "steps": [
+              "选出主体段的一句笼统判断。",
+              "写出政策改变、人的行为变化和最终结果。",
+              "用一句具体场景验证这个结果。"
+            ],
+            "successCheck": "读者能回答“为什么这个投入会带来这个结果”。",
+            "title": "把一个笼统判断展开为因果链"
+          }
+        ],
+        "paragraphs": [
+          {
+            "assessment": "立场清晰，并且提前限定了支持范围，为后文让步留出了空间。",
+            "changes": [],
+            "corrections": [],
+            "estimateReason": "单段不足以独立评分。",
+            "impact": "SUPPORTS",
+            "index": 1,
+            "optimized": "Public transport plays an important role in modern cities. I agree that governments should invest more in buses and railways, while keeping essential roads in good condition.",
+            "original": "Public transport plays an important role in modern cities. I agree that governments should invest more in buses and railways, while keeping essential roads in good condition.",
+            "role": "引言与立场",
+            "targetBandEstimate": null
+          },
+          {
+            "assessment": "中心理由成立，但数量词错误和笼统的因果表达削弱了论证。",
+            "changes": [
+              "修正表达",
+              "补强论证"
+            ],
+            "corrections": [
+              {
+                "kind": "GRAMMAR",
+                "location": {
+                  "end": 203,
+                  "missing": false,
+                  "paragraphIndex": 2,
+                  "quote": "much people",
+                  "sentenceEnd": 221,
+                  "sentenceQuote": "Buses can carry much people at the same time.",
+                  "sentenceStart": 176,
+                  "start": 192
+                },
+                "reason": "people 是可数名词复数，表示数量多时需要使用 many。",
+                "replacement": "many people"
+              },
+              {
+                "kind": "DEVELOPMENT",
+                "location": {
+                  "end": 286,
+                  "missing": false,
+                  "paragraphIndex": 2,
+                  "quote": "This is good for cities because traffic is a very serious thing.",
+                  "sentenceEnd": 286,
+                  "sentenceQuote": "This is good for cities because traffic is a very serious thing.",
+                  "sentenceStart": 222,
+                  "start": 222
+                },
+                "reason": "“交通很严重”没有解释公交投入与拥堵减少之间的关系。",
+                "replacement": "If more commuters share a bus, fewer private cars need to enter the city centre during rush hour."
+              }
+            ],
+            "estimateReason": "本段优化后的表达与展开可作为接近目标要求的练习参照。",
+            "impact": "LIMITS",
+            "index": 2,
+            "optimized": "Buses can carry many people at the same time. If more commuters share a bus, fewer private cars need to enter the city centre during rush hour. A frequent service could encourage commuters to leave their cars at home, but local authorities need to make the journeys reliable.",
+            "original": "Buses can carry much people at the same time. This is good for cities because traffic is a very serious thing. A frequent service could encourage commuters to leave their cars at home, but local authorities need to make the journeys reliable.",
+            "role": "交通效率",
+            "targetBandEstimate": 7.0
+          },
+          {
+            "assessment": "具体的学习场景把交通与教育机会连接起来，是值得保留的展开方式。",
+            "changes": [
+              "修正搭配"
+            ],
+            "corrections": [
+              {
+                "kind": "WORD_CHOICE",
+                "location": {
+                  "end": 478,
+                  "missing": false,
+                  "paragraphIndex": 3,
+                  "quote": "more independency",
+                  "sentenceEnd": 479,
+                  "sentenceQuote": "Public transport can also give residents more independency.",
+                  "sentenceStart": 420,
+                  "start": 461
+                },
+                "reason": "这里强调居民独立出行的能力，independence 更符合这句话的含义。",
+                "replacement": "greater independence"
+              }
+            ],
+            "estimateReason": "本段优化后的表达与展开可作为接近目标要求的练习参照。",
+            "impact": "SUPPORTS",
+            "index": 3,
+            "optimized": "Public transport can also give residents greater independence. Affordable routes connect residential areas with colleges and workplaces. For example, a student who cannot afford a car could reach an evening course by bus and gain skills for a better job. This shows how transport spending can widen access to education.",
+            "original": "Public transport can also give residents more independency. Affordable routes connect residential areas with colleges and workplaces. For example, a student who cannot afford a car could reach an evening course by bus and gain skills for a better job. This shows how transport spending can widen access to education.",
+            "role": "机会与公平",
+            "targetBandEstimate": 7.0
+          },
+          {
+            "assessment": "能够回应反方，说明政策适用范围；可以进一步比较维护与扩建的成本。",
+            "changes": [],
+            "corrections": [],
+            "estimateReason": "单段不足以独立评分。",
+            "impact": "SUPPORTS",
+            "index": 4,
+            "optimized": "However, roads remain important in rural areas. Communities with small populations may not support frequent train services, so road maintenance is needed for buses, deliveries and emergency vehicles. Governments should distinguish essential repairs from expensive urban road expansion.",
+            "original": "However, roads remain important in rural areas. Communities with small populations may not support frequent train services, so road maintenance is needed for buses, deliveries and emergency vehicles. Governments should distinguish essential repairs from expensive urban road expansion.",
+            "role": "让步与边界",
+            "targetBandEstimate": null
+          },
+          {
+            "assessment": "结论与开头一致，归纳了交通效率和机会两个核心理由。",
+            "changes": [],
+            "corrections": [],
+            "estimateReason": "单段不足以独立评分。",
+            "impact": "SUPPORTS",
+            "index": 5,
+            "optimized": "In conclusion, I support giving public transport a larger share of the budget. Reliable services can reduce pressure on city streets and create more opportunities, while basic road maintenance protects communities that depend on it.",
+            "original": "In conclusion, I support giving public transport a larger share of the budget. Reliable services can reduce pressure on city streets and create more opportunities, while basic road maintenance protects communities that depend on it.",
+            "role": "总结立场",
+            "targetBandEstimate": null
+          }
+        ],
+        "priorities": [
+          {
+            "action": "检查可数名词前的数量词，再读一遍完整句子。",
+            "category": "GRAMMAR",
+            "explanation": "people 是可数名词复数，表示数量多时需要使用 many。",
+            "id": "priority-1",
+            "location": {
+              "end": 203,
+              "missing": false,
+              "paragraphIndex": 2,
+              "quote": "much people",
+              "sentenceEnd": 221,
+              "sentenceQuote": "Buses can carry much people at the same time.",
+              "sentenceStart": 176,
+              "start": 192
+            },
+            "replacement": "many people",
+            "title": "much people 改为 many people"
+          },
+          {
+            "action": "把抽象的“独立”与居民能够完成的具体活动连起来。",
+            "category": "WORD_CHOICE",
+            "explanation": "这里强调居民独立出行的能力，independence 更符合这句话的含义。",
+            "id": "priority-2",
+            "location": {
+              "end": 478,
+              "missing": false,
+              "paragraphIndex": 3,
+              "quote": "more independency",
+              "sentenceEnd": 479,
+              "sentenceQuote": "Public transport can also give residents more independency.",
+              "sentenceStart": 420,
+              "start": 461
+            },
+            "replacement": "greater independence",
+            "title": "independency 改为自然的名词搭配"
+          },
+          {
+            "action": "补出“共享运力 → 小汽车减少 → 高峰拥堵缓解”的因果链。",
+            "category": "DEVELOPMENT",
+            "explanation": "“交通很严重”没有解释公交投入与拥堵减少之间的关系。",
+            "id": "priority-3",
+            "location": {
+              "end": 286,
+              "missing": false,
+              "paragraphIndex": 2,
+              "quote": "This is good for cities because traffic is a very serious thing.",
+              "sentenceEnd": 286,
+              "sentenceQuote": "This is good for cities because traffic is a very serious thing.",
+              "sentenceStart": 222,
+              "start": 222
+            },
+            "replacement": "If more commuters share a bus, fewer private cars need to enter the city centre during rush hour.",
+            "title": "说明公共交通如何缓解拥堵"
+          }
+        ],
+        "strongestCriteria": [
+          "TR",
+          "CC",
+          "LR",
+          "GRA"
+        ],
+        "targetBand": 7.5,
+        "taskType": "task2",
+        "topicLearning": {
+          "examples": [
+            {
+              "adaptation": "讨论教育公平时强调培训机会；讨论公共支出时强调可及性。",
+              "hypothetical": true,
+              "relatedTopics": [
+                "教育公平",
+                "就业机会",
+                "公共服务"
+              ],
+              "reuseOf": null,
+              "scenario": "A student without a car could use an affordable evening bus to attend a training course and improve their job prospects.",
+              "structure": "公共服务 → 参与门槛降低 → 学习与就业机会增加。",
+              "title": "夜校通勤的学生"
+            }
+          ],
+          "expressions": [
+            {
+              "expression": "road maintenance",
+              "meaning": "道路维护",
+              "source": "CANDIDATE",
+              "usage": "讨论基础设施投入与支出优先级时使用。"
+            },
+            {
+              "expression": "greater independence",
+              "meaning": "更强的独立性",
+              "source": "OPTIMIZED",
+              "usage": "描述公共服务让人能够独立参与社会生活。"
+            }
+          ],
+          "theme": "公共交通与城市机会"
+        },
+        "version": "detailed-writing-report-v1"
+      }
+    }
+  },
+  "exportArtifact": {
+    "state": "BLOCKED",
+    "reason": "ARTIFACT_NOT_MATERIALIZED"
+  },
+  "workspaceSha256": "9e32fa074cda3a2dfe54e5f613aa4969aeb098012bb3b9566f28900dc9fa8aa8",
+  "source": {
+    "question": "Some people favour this policy. To what extent do you agree?",
+    "candidateScript": "Public transport plays an important role in modern cities. I agree that governments should invest more in buses and railways, while keeping essential roads in good condition.\n\nBuses can carry much people at the same time. This is good for cities because traffic is a very serious thing. A frequent service could encourage commuters to leave their cars at home, but local authorities need to make the journeys reliable.\n\nPublic transport can also give residents more independency. Affordable routes connect residential areas with colleges and workplaces. For example, a student who cannot afford a car could reach an evening course by bus and gain skills for a better job. This shows how transport spending can widen access to education.\n\nHowever, roads remain important in rural areas. Communities with small populations may not support frequent train services, so road maintenance is needed for buses, deliveries and emergency vehicles. Governments should distinguish essential repairs from expensive urban road expansion.\n\nIn conclusion, I support giving public transport a larger share of the budget. Reliable services can reduce pressure on city streets and create more opportunities, while basic road maintenance protects communities that depend on it.",
+    "taskType": "task2",
+    "createdAt": "2026-09-12T19:05:35.452459Z",
+    "uploadId": null,
+    "targetBand": 7.5
+  },
+  "assessmentIssues": [],
+  "progress": null,
+  "capabilities": {
+    "downloadPdf": true
+  }
+}

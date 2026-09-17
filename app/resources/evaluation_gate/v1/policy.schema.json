@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "policyId", "semanticVersion", "dictionarySha256", "rules"],
+  "properties": {
+    "schemaVersion": {"const": "evaluation-gate-v1"},
+    "policyId": {"type": "string", "minLength": 1},
+    "semanticVersion": {"type": "string", "minLength": 1},
+    "dictionarySha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["metricId", "requirement", "comparator", "threshold", "unit", "provenanceId"],
+        "properties": {
+          "metricId": {"type": "string"},
+          "requirement": {"enum": ["REQUIRED", "DEFERRED", "NOT_APPLICABLE"]},
+          "comparator": {"enum": ["GTE", "LTE", "NONE"]},
+          "threshold": {"type": ["string", "null"]},
+          "unit": {"type": "string"},
+          "provenanceId": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

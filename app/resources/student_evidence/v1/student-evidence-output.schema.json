@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "submissionSnapshotId", "essayVersionId", "locatorManifestSha256", "task2UnderstandingSha256", "observations", "contradictionHooks"],
+  "properties": {
+    "schemaVersion": {"const": "student-evidence-output-v1"},
+    "submissionSnapshotId": {"type": "string", "pattern": "^submission:[0-9a-f]{64}$"},
+    "essayVersionId": {"type": "string", "pattern": "^essay:[0-9a-f]{64}$"},
+    "locatorManifestSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "task2UnderstandingSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "observations": {
+      "type": "array", "items": {"type": "object", "additionalProperties": false,
+        "required": ["observationId", "criterion", "scope", "statement", "evidenceSpans", "paragraphIds"],
+        "allOf": [
+          {
+            "if": {"properties": {"scope": {"const": "SPAN"}}, "required": ["scope"]},
+            "then": {"properties": {
+              "evidenceSpans": {"minItems": 1, "x-repair-code": "SPAN_REQUIRES_EVIDENCE_SPAN"},
+              "paragraphIds": {"maxItems": 0, "x-repair-code": "SPAN_FORBIDS_PARAGRAPH_IDS"}
+            }}
+          },
+          {
+            "if": {"properties": {"scope": {"const": "WHOLE_PARAGRAPH"}}, "required": ["scope"]},
+            "then": {"properties": {
+              "evidenceSpans": {"maxItems": 0, "x-repair-code": "WHOLE_PARAGRAPH_FORBIDS_SPANS"},
+              "paragraphIds": {"minItems": 1, "maxItems": 1, "x-repair-code": "WHOLE_PARAGRAPH_REQUIRES_ONE_PARAGRAPH"}
+            }}
+          },
+          {
+            "if": {"properties": {"scope": {"enum": ["ABSENCE", "GLOBAL"]}}, "required": ["scope"]},
+            "then": {"properties": {
+              "evidenceSpans": {"maxItems": 0, "x-repair-code": "UNQUOTED_SCOPE_FORBIDS_SPANS"},
+              "paragraphIds": {"maxItems": 0, "x-repair-code": "UNQUOTED_SCOPE_FORBIDS_PARAGRAPH_IDS"}
+            }}
+          }
+        ],
+        "properties": {
+          "observationId": {"type": "string", "pattern": "^o[0-9]{4}$"},
+          "criterion": {"enum": ["TR", "CC", "LR", "GRA"]},
+          "scope": {"enum": ["SPAN", "WHOLE_PARAGRAPH", "ABSENCE", "GLOBAL"]},
+          "statement": {"type": "string", "minLength": 1, "maxLength": 400},
+          "paragraphIds": {"type": "array", "items": {"type": "string", "pattern": "^p[0-9]{4}$"}, "uniqueItems": true},
+          "evidenceSpans": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+            "required": ["spanId", "paragraphId", "sentenceId", "start", "end", "quote"],
+            "properties": {
+              "spanId": {"type": "string", "pattern": "^e[0-9]{4}$"},
+              "paragraphId": {"type": "string", "pattern": "^p[0-9]{4}$"},
+              "sentenceId": {"type": "string", "pattern": "^p[0-9]{4}-s[0-9]{4}$"},
+              "start": {"type": "integer", "minimum": 0},
+              "end": {"type": "integer", "minimum": 1},
+              "quote": {"type": "string", "minLength": 1}
+            }
+          }}
+        }
+      }
+    },
+    "contradictionHooks": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+      "required": ["leftObservationId", "rightObservationId", "kind"],
+      "properties": {
+        "leftObservationId": {"type": "string", "pattern": "^o[0-9]{4}$"},
+        "rightObservationId": {"type": "string", "pattern": "^o[0-9]{4}$"},
+        "kind": {"enum": ["POTENTIAL_CONTRADICTION"]}
+      }
+    }}
+  }
+}

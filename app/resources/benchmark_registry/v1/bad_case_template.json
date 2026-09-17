@@ -1,0 +1,12 @@
+{
+  "badCaseId": "bad-case-example",
+  "complaintId": "complaint-reference-only",
+  "reproductionSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "affectedLayer": "provider-independent-evaluation",
+  "evidenceRefs": ["redacted-evidence-reference"],
+  "hypothesis": "state the testable hypothesis without customer content",
+  "changedVariable": "name exactly one changed variable",
+  "decision": "PENDING",
+  "redactionStatus": "COMPLETE",
+  "lineage": null
+}

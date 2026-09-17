@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "evaluation-gate-v1",
+  "policyId": "phase1-foundation-v1",
+  "semanticVersion": "1.0.0",
+  "dictionarySha256": "1ecdfdd9ae0dc2092465335487534221a8ae7a619decffe6b584f3798502c6fd",
+  "rules": [
+    {"metricId": "SCORE_STABILITY", "requirement": "DEFERRED", "comparator": "NONE", "threshold": null, "unit": "decimal", "provenanceId": "P1_05_SCORE_IMPLEMENTATION_DEFERRED"},
+    {"metricId": "EVIDENCE_VALIDITY", "requirement": "DEFERRED", "comparator": "NONE", "threshold": null, "unit": "ratio", "provenanceId": "P1_05_EVIDENCE_IMPLEMENTATION_DEFERRED"},
+    {"metricId": "SCHEMA_COMPLETION", "requirement": "DEFERRED", "comparator": "NONE", "threshold": null, "unit": "ratio", "provenanceId": "P1_05_NUMERIC_THRESHOLD_DEFERRED"},
+    {"metricId": "FAILURE_RATE", "requirement": "DEFERRED", "comparator": "NONE", "threshold": null, "unit": "ratio", "provenanceId": "P1_05_NUMERIC_THRESHOLD_DEFERRED"},
+    {"metricId": "LATENCY", "requirement": "DEFERRED", "comparator": "NONE", "threshold": null, "unit": "milliseconds", "provenanceId": "P1_05_NUMERIC_THRESHOLD_DEFERRED"},
+    {"metricId": "COST", "requirement": "DEFERRED", "comparator": "NONE", "threshold": null, "unit": "currency", "provenanceId": "P1_05_NUMERIC_THRESHOLD_DEFERRED"},
+    {"metricId": "RIGHTS_COMPLIANCE", "requirement": "REQUIRED", "comparator": "GTE", "threshold": "1", "unit": "ratio", "provenanceId": "P1_04_RIGHTS_AND_PROVENANCE_GATE"},
+    {"metricId": "EXPECTED_CHECK_CONFORMANCE", "requirement": "REQUIRED", "comparator": "GTE", "threshold": "1", "unit": "ratio", "provenanceId": "P1_04_DETERMINISTIC_CHECK_CONTRACT"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "candidateScript": "Some people prefer city life because services and employment are concentrated there. Others value rural communities for their quieter environment and closer contact with nature. Both preferences depend on a person's work, family needs, and access to transport. In my view, neither setting is universally better, so local policy should improve essential services in both places rather than force one pattern of living.",
+  "claimScope": "PUBLIC_SAFE_SYNTHETIC_DEMO_ONLY",
+  "officialOrExaminerVerified": false,
+  "question": "Some people prefer living in cities, while others prefer the countryside. Discuss both views and give your opinion.",
+  "synthetic": true,
+  "taskType": "task2",
+  "version": "c3-synthetic-demo-v1"
+}

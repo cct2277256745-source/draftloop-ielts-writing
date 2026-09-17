@@ -1,0 +1,120 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Local credentials and model runtime settings. Keep only the blank template.
+.env
+.env.*
+!.env.example
+*.env
+.scratch/local-rag/
+.scratch/browser-c3/runtime/
+.scratch/**/runtime/
+
+# Local/generated validation output (never publish private submissions or run artifacts)
+tmp/
+output/
+artifacts/
+design-preview/
+.impeccable/
+
+# 构建产物
+build/
+dist/
+*.spec
+
+# 本地隔离的旧语料：原始 PDF、页面图片和 samples.json 均不进入产品基线
+app/resources/corpus/
+
+# 系统
+.DS_Store
+*.log
+
+# 私人学习档案（进度、错题与复习记录不进入公开仓库）
+.learning/
+
+# 旧 Electron 归档的依赖
+legacy-electron/node_modules/
+legacy-electron/out/
+legacy-electron/dist/
+legacy-electron/reports/
+
+# 本地交付副本与主源码重复，不进入主仓库历史
+交付文件/
+
+# P0-01：独立上游研究、私密语料与未来阶段实现不进入主产品根基线
+.agents/
+ielts_band_evidence_corpus/
+ielts_dataset_discovery/
+rubrics/
+synthetic_reference/
+
+# 只保留当前 Git 基线的本地 issue；其余是未来阶段工作记录
+.scratch/*
+!.scratch/bootstrap-git-baseline/
+!.scratch/bootstrap-git-baseline/**
+
+# 未来阶段的 supporting 文档不代表 P0-01 已接受
+docs/rubrics/
+docs/synthetic-reference/
+
+# 只保留产品打包/图标工具与当前 Python/PySide characterization 测试
+scripts/*
+!scripts/make_desktop_app.sh
+!scripts/make_icon.py
+!scripts/validate_task2_rubric.py
+!scripts/validate_task1_rubric.py
+tests/*
+!tests/test_llm_pipeline.py
+!tests/test_provider_contracts.py
+!tests/test_vision_routing.py
+!tests/test_fail_closed_envelope.py
+!tests/test_observability.py
+!tests/test_rubric_schema.py
+!tests/test_rubric_runtime.py
+!tests/test_rubric_consumers.py
+!tests/test_rubric_rule_audit.py
+!tests/test_rubric_hash_reconciliation.py
+!tests/test_task1_rubric_runtime.py
+!tests/rubric_test_support.py
+!tests/test_evaluation_runner.py
+!tests/test_benchmark_registry.py
+!tests/test_evaluation_gate.py
+!tests/test_c4_product_facade.py
+!tests/test_webengine_shell.py
+!tests/test_local_private_rag.py
+!scripts/validate_local_private_rag.py
+!scripts/validate_browser_c3.py
+!tests/test_browser_c3_projection.py
+!tests/test_criterion_scoring_diagnostic.py
+!scripts/inspect_criterion_diagnostic.py
+!tests/fixtures/
+tests/fixtures/*
+!tests/fixtures/browser-task2-local.json
+!scripts/run_web.sh
+!tests/test_provider_recovery.py
+!tests/test_scoring_web_recovery.py
+!tests/test_task1_browser.py
+!tests/test_browser_privacy.py
+!tests/test_browser_learning.py
+!tests/test_rag_calibration_audit.py
+!tests/test_detailed_report.py
+!tests/detailed_report_support.py
+!tests/test_model_settings.py
+!tests/test_example_memory.py
+!scripts/validate_calibrated_report.py
+!scripts/build_portfolio_pdf.py
+.scratch/ui-report-redesign/
+
+# 历史 Electron 原型仅作为只读参考；隔离其 corpus 与带有本机私有路径的 ingest 文件
+legacy-electron/resources/corpus/
+legacy-electron/scripts/ingest-corpus.ts
+legacy-electron/src/main/services/corpus/ingestPdf.ts
+
+!tests/test_browser_report_pdf.py
+
+!scripts/preview_report_fixture.py
+!scripts/validate_task1_calibrated_report.py
+!tests/test_task1_calibration_references.py

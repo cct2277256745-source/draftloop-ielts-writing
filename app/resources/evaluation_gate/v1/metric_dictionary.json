@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "evaluation-gate-v1",
+  "metrics": [
+    {"metricId": "SCORE_STABILITY", "unit": "decimal", "primaryKey": "maxDelta", "description": "Repeated pinned-run score span; never human accuracy."},
+    {"metricId": "EVIDENCE_VALIDITY", "unit": "ratio", "primaryKey": "rate", "description": "Valid required evidence locators over all required locators."},
+    {"metricId": "SCHEMA_COMPLETION", "unit": "ratio", "primaryKey": "rate", "description": "Schema-valid completed cases over all planned cases."},
+    {"metricId": "FAILURE_RATE", "unit": "ratio", "primaryKey": "rate", "description": "Completed failures plus incomplete cases over all planned cases."},
+    {"metricId": "LATENCY", "unit": "milliseconds", "primaryKey": "p95Ms", "description": "Completed-case latency distribution including failed cases."},
+    {"metricId": "COST", "unit": "currency", "primaryKey": "perPlannedCase", "description": "Known same-currency cost over all planned cases; never zero when unknown."},
+    {"metricId": "RIGHTS_COMPLIANCE", "unit": "ratio", "primaryKey": "rate", "description": "Rights-valid executable cases over all executed cases."},
+    {"metricId": "EXPECTED_CHECK_CONFORMANCE", "unit": "ratio", "primaryKey": "rate", "description": "Observed deterministic registry checks over all deterministic checks."}
+  ]
+}

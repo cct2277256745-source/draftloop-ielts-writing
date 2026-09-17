@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "submissionSnapshotId", "questionContentSha256", "essayVersionId", "locatorManifestSha256", "questionType", "requirements", "position", "coverage", "argumentNodes", "analyzerUncertainty"],
+  "properties": {
+    "schemaVersion": {"const": "task2-understanding-output-v1"},
+    "submissionSnapshotId": {"type": "string", "minLength": 1},
+    "questionContentSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "essayVersionId": {"type": "string", "pattern": "^essay:[0-9a-f]{64}$"},
+    "locatorManifestSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "questionType": {"enum": ["OPINION", "DISCUSS_BOTH_VIEWS", "ADVANTAGES_DISADVANTAGES", "PROBLEM_SOLUTION", "CAUSES_EFFECTS", "POSITIVE_NEGATIVE_DEVELOPMENT", "DIRECT_QUESTIONS", "HYBRID", "AMBIGUOUS"]},
+    "requirements": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["requirementId", "kind", "questionStart", "questionEnd"], "properties": {"requirementId": {"type": "string", "pattern": "^r[0-9]{4}$"}, "kind": {"enum": ["STATE_POSITION", "DISCUSS_VIEW_A", "DISCUSS_VIEW_B", "EXPLAIN_ADVANTAGES", "EXPLAIN_DISADVANTAGES", "WEIGH_ADVANTAGES_DISADVANTAGES", "IDENTIFY_PROBLEMS", "PROPOSE_SOLUTIONS", "EXPLAIN_CAUSES", "EXPLAIN_EFFECTS", "EVALUATE_POSITIVE_NEGATIVE", "ANSWER_DIRECT_QUESTION", "SUPPORT_WITH_REASONS", "INCLUDE_RELEVANT_EXAMPLES"]}, "questionStart": {"type": "integer", "minimum": 0}, "questionEnd": {"type": "integer", "minimum": 1}}}},
+    "position": {"type": "object", "additionalProperties": false, "required": ["state", "sentenceIds"], "properties": {"state": {"enum": ["NOT_REQUIRED", "CLEAR", "IMPLICIT", "CONTRADICTORY", "ABSENT", "UNCERTAIN"]}, "sentenceIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}}},
+    "coverage": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["requirementId", "state", "sentenceIds"], "properties": {"requirementId": {"type": "string", "pattern": "^r[0-9]{4}$"}, "state": {"enum": ["ADDRESSED", "PARTIAL", "NOT_ADDRESSED", "UNCERTAIN"]}, "sentenceIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}}}},
+    "argumentNodes": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["nodeId", "role", "sentenceIds", "requirementIds", "parentNodeId"], "properties": {"nodeId": {"type": "string", "pattern": "^n[0-9]{4}$"}, "role": {"enum": ["THESIS", "CLAIM", "REASON", "EXAMPLE", "COUNTERARGUMENT", "CONCLUSION"]}, "sentenceIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}, "requirementIds": {"type": "array", "items": {"type": "string", "pattern": "^r[0-9]{4}$"}, "uniqueItems": true}, "parentNodeId": {"type": ["string", "null"], "pattern": "^n[0-9]{4}$"}}}},
+    "analyzerUncertainty": {"type": "array", "items": {"enum": ["TASK_TYPE_UNRESOLVED", "REQUIREMENTS_UNRESOLVED", "LOCATOR_UNRESOLVED", "LINEAGE_INVALID"]}, "uniqueItems": true}
+  }
+}

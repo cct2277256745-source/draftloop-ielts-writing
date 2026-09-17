@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "sources", "cases"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": "benchmark-case-registry-v1"},
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["sourceId", "status", "allowedUses", "provenanceKind", "exclusionReason"],
+        "additionalProperties": false,
+        "properties": {
+          "sourceId": {"type": "string", "minLength": 1},
+          "status": {"enum": ["PROJECT_OWNED", "METADATA_REFERENCE_ONLY", "UNKNOWN", "PROHIBITED"]},
+          "allowedUses": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "provenanceKind": {"type": "string", "minLength": 1},
+          "exclusionReason": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["caseId", "tier", "taskType", "authorityRole", "eligibility", "provenance", "synthetic", "corpusPartition", "criterion", "coverageTags", "expectedChecks", "fixtureId", "fixtureSha256", "badCaseLineage"],
+        "additionalProperties": false,
+        "properties": {
+          "caseId": {"type": "string", "minLength": 1},
+          "tier": {"enum": ["A", "B", "C", "D"]},
+          "taskType": {"enum": ["task1", "task2"]},
+          "authorityRole": {"enum": ["OFFICIAL_SANITY_METADATA", "SYNTHETIC_REGRESSION", "BAD_CASE_REPRODUCTION"]},
+          "eligibility": {"enum": ["EXECUTABLE_OFFLINE", "METADATA_ONLY", "EXCLUDED"]},
+          "provenance": {
+            "type": "object",
+            "required": ["sourceId", "referenceSha256", "taskType"],
+            "additionalProperties": false,
+            "properties": {
+              "sourceId": {"type": "string", "minLength": 1},
+              "referenceSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+              "taskType": {"enum": ["task1", "task2"]}
+            }
+          },
+          "synthetic": {"type": "boolean"},
+          "corpusPartition": {"type": ["string", "null"]},
+          "criterion": {"type": ["string", "null"]},
+          "coverageTags": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "expectedChecks": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["kind", "checkId"], "additionalProperties": false, "properties": {"kind": {"enum": ["DETERMINISTIC", "HUMAN_REVIEW"]}, "checkId": {"type": "string", "minLength": 1}}}},
+          "fixtureId": {"type": ["string", "null"]},
+          "fixtureSha256": {"type": ["string", "null"]},
+          "badCaseLineage": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+PySide6>=6.6
+reportlab>=4.0
+requests>=2.31
+jsonschema>=4.18,<5

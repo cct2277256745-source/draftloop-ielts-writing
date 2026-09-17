@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "benchmark-case-registry-v1",
+  "fixtureId": "t1-task-boundary",
+  "synthetic": true,
+  "corpusPartition": "mutation",
+  "sourceId": "P1_04_PROJECT_FIXTURES_V1",
+  "taskType": "task1",
+  "rubricIdentity": {"rubricId": "ielts_academic_writing_task1", "version": "1.0.0", "runtimeContentSha256": "8ff84b27fa0c1604255da5a513bddeef39f5e8f6903736b4dc78482fab899313"},
+  "criterionUnderTest": "CC",
+  "scenario": "task-boundary",
+  "payload": {"fixtureOutcome": "success", "latencyMs": 1, "registryScenario": "task1-task-boundary"}
+}

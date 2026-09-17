@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "metrics"],
+  "properties": {
+    "schemaVersion": {"const": "evaluation-gate-v1"},
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["metricId", "unit", "primaryKey", "description"],
+        "properties": {
+          "metricId": {"type": "string"},
+          "unit": {"enum": ["ratio", "milliseconds", "currency", "decimal", "boolean"]},
+          "primaryKey": {"type": "string", "minLength": 1},
+          "description": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

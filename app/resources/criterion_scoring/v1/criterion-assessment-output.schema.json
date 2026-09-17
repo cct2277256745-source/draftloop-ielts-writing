@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "evidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observationId", "spanIds"],
+      "properties": {
+        "observationId": {"type": "string", "pattern": "^o[0-9]{4}$"},
+        "spanIds": {"type": "array", "items": {"type": "string", "pattern": "^e[0-9]{4}$"}, "uniqueItems": true}
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "anchorBand", "dimensionId", "claimFit", "officialClaimIds", "evidenceRefs"],
+      "properties": {
+        "role": {"enum": ["ANCHOR_SUPPORT", "HIGHER_BAND_BOUNDARY", "UNASSESSABLE_SUPPORT"]},
+        "anchorBand": {"type": "integer", "minimum": 0, "maximum": 9},
+        "dimensionId": {"type": ["string", "null"], "minLength": 1},
+        "claimFit": {"enum": ["DEMONSTRATED", "PARTIALLY_DEMONSTRATED", "NOT_DEMONSTRATED", "CONTRADICTED", "RELATED_EVIDENCE_ONLY"]},
+        "officialClaimIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "evidenceRefs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/evidenceRef"}}
+      }
+    },
+    "hook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["leftObservationId", "rightObservationId"],
+      "properties": {
+        "leftObservationId": {"type": "string", "pattern": "^o[0-9]{4}$"},
+        "rightObservationId": {"type": "string", "pattern": "^o[0-9]{4}$"}
+      }
+    },
+    "common": {
+      "type": "object",
+      "required": ["schemaVersion", "submissionSnapshotId", "essayVersionId", "locatorManifestSha256", "task2UnderstandingSha256", "studentEvidenceSha256", "rubricId", "rubricVersion", "runtimeContentSha256", "criterion", "status", "lowerBand", "upperBand", "confidence", "confidenceReasons", "unassessableReasons", "findings", "usedContradictionHooks"],
+      "properties": {
+        "schemaVersion": {"const": "criterion-assessment-output-v1"},
+        "submissionSnapshotId": {"type": "string", "pattern": "^submission:[0-9a-f]{64}$"},
+        "essayVersionId": {"type": "string", "pattern": "^essay:[0-9a-f]{64}$"},
+        "locatorManifestSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "task2UnderstandingSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "studentEvidenceSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "rubricId": {"type": "string", "minLength": 1},
+        "rubricVersion": {"type": "string", "minLength": 1},
+        "runtimeContentSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "criterion": {"enum": ["TR", "CC", "LR", "GRA"]},
+        "status": {"enum": ["ASSESSED", "UNASSESSABLE"]},
+        "findings": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/finding"}},
+        "usedContradictionHooks": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/hook"}}
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "allOf": [
+        {"$ref": "#/$defs/common"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schemaVersion": {}, "submissionSnapshotId": {}, "essayVersionId": {}, "locatorManifestSha256": {}, "task2UnderstandingSha256": {}, "studentEvidenceSha256": {}, "rubricId": {}, "rubricVersion": {}, "runtimeContentSha256": {}, "criterion": {},
+            "status": {"const": "ASSESSED"},
+            "lowerBand": {"type": "integer", "minimum": 0, "maximum": 9},
+            "upperBand": {"type": "integer", "minimum": 0, "maximum": 9},
+            "confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]},
+            "confidenceReasons": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["RANGE_WELL_SUPPORTED", "ADJACENT_ANCHOR_MIX", "EVIDENCE_COVERAGE_LIMITED", "WITHIN_CRITERION_TENSION", "BOUNDARY_DISTINCTION_LIMITED"]}},
+            "unassessableReasons": {"type": "array", "maxItems": 0},
+            "findings": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/finding"}},
+            "usedContradictionHooks": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/hook"}}
+          }
+        }
+      ]
+    },
+    {
+      "allOf": [
+        {"$ref": "#/$defs/common"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schemaVersion": {}, "submissionSnapshotId": {}, "essayVersionId": {}, "locatorManifestSha256": {}, "task2UnderstandingSha256": {}, "studentEvidenceSha256": {}, "rubricId": {}, "rubricVersion": {}, "runtimeContentSha256": {}, "criterion": {},
+            "status": {"const": "UNASSESSABLE"},
+            "lowerBand": {"type": "null"},
+            "upperBand": {"type": "null"},
+            "confidence": {"type": "null"},
+            "confidenceReasons": {"type": "array", "maxItems": 0},
+            "unassessableReasons": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["INSUFFICIENT_VALIDATED_EVIDENCE", "NON_ADJACENT_BAND_UNCERTAINTY", "EVIDENCE_TENSION_PREVENTS_RANGE", "UNPROVABLE_SPECIAL_CONDITION"]}},
+            "findings": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/finding"}},
+            "usedContradictionHooks": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/hook"}}
+          }
+        }
+      ]
+    }
+  ]
+}

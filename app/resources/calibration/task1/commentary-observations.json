@@ -1,0 +1,133 @@
+{
+  "version": "task1-commentary-observations-v1",
+  "source": {
+    "title": "IELTS Academic Writing Sample Tasks (2023)",
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-writing-sample-tasks-2023.pdf",
+    "accessed": "2026-09-13"
+  },
+  "scope": "Original concise summaries of published examiner observations. Not specimen essays, criterion band anchors, or exhaustive coverage. No source text copied. Bands intentionally excluded.",
+  "items": [
+    {
+      "id": "ta-data",
+      "criterion": "TA",
+      "page": 9,
+      "sample": "1A-A",
+      "features": [
+        "overview",
+        "data",
+        "figures"
+      ],
+      "summary": "General trends were attempted, but numerical support was absent."
+    },
+    {
+      "id": "ta-overview",
+      "criterion": "TA",
+      "page": 11,
+      "sample": "1B-A",
+      "features": [
+        "overview",
+        "comparison",
+        "key features"
+      ],
+      "summary": "Data coverage was good; the main contrasting patterns needed an overview."
+    },
+    {
+      "id": "ta-relevance",
+      "criterion": "TA",
+      "page": 15,
+      "sample": "1C-B",
+      "features": [
+        "format",
+        "irrelevance",
+        "overview",
+        "process"
+      ],
+      "summary": "Personal remarks and letter conventions weakened task fulfilment despite strong language."
+    },
+    {
+      "id": "ta-stages",
+      "criterion": "TA",
+      "page": 17,
+      "sample": "1C-C",
+      "features": [
+        "process",
+        "overview",
+        "accuracy"
+      ],
+      "summary": "Stages were accurately covered; the overview needed meaningful groups, beyond counting steps."
+    },
+    {
+      "id": "cc-links",
+      "criterion": "CC",
+      "page": 10,
+      "sample": "1A-B",
+      "features": [
+        "cohesion",
+        "connectives",
+        "progression"
+      ],
+      "summary": "The sequence was readable, but excessive connectors and weak links reduced cohesion."
+    },
+    {
+      "id": "cc-control",
+      "criterion": "CC",
+      "page": 17,
+      "sample": "1C-C",
+      "features": [
+        "paragraphing",
+        "reference",
+        "cohesion"
+      ],
+      "summary": "Paragraph boundaries, cross-references and transitions made the explanation easy to follow."
+    },
+    {
+      "id": "lr-choice",
+      "criterion": "LR",
+      "page": 10,
+      "sample": "1A-B",
+      "features": [
+        "word choice",
+        "precision",
+        "expression"
+      ],
+      "summary": "Trend vocabulary worked, while some word selections and phrasing remained inappropriate."
+    },
+    {
+      "id": "lr-flexibility",
+      "criterion": "LR",
+      "page": 17,
+      "sample": "1C-C",
+      "features": [
+        "flexibility",
+        "range",
+        "accuracy"
+      ],
+      "summary": "Vocabulary was flexible, varied and accurate for the information being described."
+    },
+    {
+      "id": "gra-range",
+      "criterion": "GRA",
+      "page": 10,
+      "sample": "1A-B",
+      "features": [
+        "complexity",
+        "range",
+        "accuracy"
+      ],
+      "summary": "Grammatical control was sound, but sentence patterns offered little complexity or variation."
+    },
+    {
+      "id": "gra-control",
+      "criterion": "GRA",
+      "page": 17,
+      "sample": "1C-C",
+      "features": [
+        "complexity",
+        "accuracy",
+        "minor errors"
+      ],
+      "summary": "Varied grammatical structures were controlled; occasional small errors did not obstruct meaning."
+    }
+  ],
+  "contentSha256": "77094d318e3a9268a8e214416ddb1636132092bd945dcbe107eb064786ec5d28"
+}
