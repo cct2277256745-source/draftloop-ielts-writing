@@ -94,6 +94,8 @@ tests/*
 tests/fixtures/*
 !tests/fixtures/browser-task2-local.json
 !scripts/run_web.sh
+!scripts/make_desktop_app.sh
+!scripts/make_icon.py
 !tests/test_provider_recovery.py
 !tests/test_scoring_web_recovery.py
 !tests/test_task1_browser.py

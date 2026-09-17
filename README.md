@@ -66,6 +66,18 @@ For the Python desktop entry point:
 .venv/bin/python -m app.main
 ```
 
+To package the current web workspace as a macOS app:
+
+```bash
+bash scripts/make_desktop_app.sh
+open dist/DraftLoop.app
+```
+
+The bundle starts the same local-only Python service as the browser build and
+opens it inside a hardened WebEngine shell. User data stays in
+`~/Library/Application Support/DraftLoop`; the bundle contains no API keys or
+model credentials.
+
 ## Verification
 
 The checks used for this portfolio build are:
