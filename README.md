@@ -84,7 +84,6 @@ The Python suite is self-contained and does not send real provider requests. The
 app/                    Python domain, scoring, RAG audit and PDF services
 frontend/src/           React writing studio, model settings and report UI
 app/resources/          Rubric pins, schemas and rights-safe demo fixtures
-docs/adr/               Decisions that shape the scoring and privacy boundary
 docs/portfolio/         The short product case study and bad-case notes
 scripts/                Local run and validation commands
 tests/                  Contract and integration tests
@@ -94,7 +93,7 @@ The old Electron prototype and generated design previews are deliberately left o
 
 ## Design notes
 
-The interface follows the approved "double-page handout plus academic report" direction: warm paper, navy navigation, Songti for Chinese and Times New Roman for English, fine rules, and explicit evidence labels. See [DESIGN.md](DESIGN.md), [PRODUCT.md](PRODUCT.md), and the [portfolio case study](docs/portfolio/case-study.md) for the decisions behind the current screens.
+The interface follows the approved "double-page handout plus academic report" direction: warm paper, navy navigation, Songti for Chinese and Times New Roman for English, fine rules, and explicit evidence labels. See [DESIGN.md](DESIGN.md) and the [portfolio case study](docs/portfolio/case-study.md) for the decisions behind the current screens.
 
 ## Data and credentials
 
