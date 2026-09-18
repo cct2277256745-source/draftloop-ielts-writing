@@ -4,6 +4,21 @@ DraftLoop is a Chinese-first IELTS Academic Writing workspace. A learner submits
 
 This repository is a portfolio build. The score is an internal estimate for learning, not an IELTS result and not a substitute for an official examiner.
 
+## Product preview
+
+The current showcase includes two real UI captures from the DraftLoop review
+surface. The writing studio keeps the prompt and essay visible together; the
+report view turns the locked score and evidence-linked revision priorities into
+an actionable next draft.
+
+![DraftLoop writing studio](docs/assets/draftloop-writing-studio.jpg)
+
+*Writing studio: enter the task prompt and essay side by side before review.*
+
+![DraftLoop writing report](docs/assets/draftloop-report.jpg)
+
+*Writing report: inspect a focused revision priority with the supporting evidence.*
+
 ## What the project demonstrates
 
 - A two-pane writing studio with the task on the left and the submitted essay on the right.
